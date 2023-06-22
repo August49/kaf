@@ -4,7 +4,15 @@
   --color-headings: #fff;
   --color-body: #9c9898;
   background-color: black;
+  --color-hover: #ffffffd8;
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -14,6 +22,7 @@ body {
   line-height: 1.5;
   font-size: 2.4rem;
 }
+
 /* typography */
 h1,
 h2,
@@ -47,5 +56,59 @@ p {
   }
   h3 {
     font-size: 2rem;
+  }
+}
+
+/* button component */
+
+.btn {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border: 0;
+  border-radius: 40px;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 1rem;
+}
+.btn-primary:hover {
+  background-color: var(--color-hover);
+}
+.btn-primary {
+  background-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-hover);
+}
+.btn-secondary {
+  background-color: var(--color-secondary);
+}
+.btn-outline {
+  background-color: var(--color-secondary);
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+.btn-outline:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-hover);
+}
+
+.btn-size {
+  /* width: calc(100% - 200px); */
+  width: 80%;
+  display: inline-block;
+}
+.btn::before {
+  content: "";
+  background-color: #fff;
+}
+
+@media screen and (min-width) {
+  .btn {
+    font-size: 1.8rem;
   }
 }
